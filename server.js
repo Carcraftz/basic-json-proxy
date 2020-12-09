@@ -2,8 +2,9 @@ const express = require('express')
 const app = express()
 const port = 3000
 const fetch = require("node-fetch")
-app.get('/:website', (req, res) => {
-  let website = req.params.website
+app.get(/(.*)/, (req, res) => {
+  let website = req.path.substring(1,req.path.length)
+  console.log(website)
   fetch(website).then(res=>res.json()).then(json=>{res.json(json)}).catch(e=>{res.status("400").send(e)})
 })
 
