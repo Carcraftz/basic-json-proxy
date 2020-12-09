@@ -15,7 +15,8 @@
     "keyv": "^4.0.0",
     "uuid": "^8.3.0",
     "express-rate-limit": "^5.1.1",
-    "friendly-words": "^1.1.10"
+    "friendly-words": "^1.1.10",
+    "node-fetch": "^2.6.1"
   },
   "engines": {
     "node": "12.x"
