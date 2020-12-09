@@ -8,6 +8,6 @@ app.get(/(.*)/, (req, res) => {
   fetch(website).then(res=>res.json()).then(json=>{res.json(json)}).catch(e=>{res.status("400").send(e)})
 })
 
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log(`Example app listening at http://localhost:${port}`)
 })
